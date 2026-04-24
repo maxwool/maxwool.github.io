@@ -574,12 +574,7 @@
       <div class="profile-corner tr"></div>
       <div class="profile-corner bl"></div>
       <div class="profile-corner br"></div>
-      <div class="profile-placeholder">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-          <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-        </svg>
-        <span>[ add your photo here ]</span>
-      </div>
+      <img src="images/headshot.jpg" alt="Max Wool" style="width:100%;height:100%;object-fit:cover;display:block;">
     </div>
   </div>
 </section>
@@ -628,8 +623,9 @@
           <div class="stat-label">Laps Swum</div>
         </div>
       </div>
-      <div class="interest-image">
-        <span>[ add a photo representing your interests ]</span>
+      <div class="interest-image" style="background: linear-gradient(135deg, #0d1b2a, #1a1a2e, #0f3460); border: 1px solid var(--border); position: relative; overflow: hidden;">
+        <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,229,255,0.08),rgba(124,77,255,0.08));"></div>
+        <span style="position:relative;z-index:1;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);">swim · hack · analyze</span>
       </div>
     </div>
   </div>
@@ -643,21 +639,9 @@
     <div class="section-line"></div>
   </div>
   <div class="reveal">
-    <div class="resume-embed">
-      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2a2a3a" stroke-width="1.5">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-        <polyline points="14 2 14 8 20 8"/>
-      </svg>
-      <div class="resume-note">
-        Embed your resume PDF here via Google Drive or a direct PDF link.<br>
-        Replace this block with:<br>
-        &lt;iframe src="YOUR_GOOGLE_DRIVE_EMBED_LINK" width="100%" height="800px"&gt;&lt;/iframe&gt;<br><br>
-        Make sure sharing is set to "Anyone with the link can view".
-      </div>
-    </div>
+    <iframe src="resume.html" width="100%" height="820px" style="border:1px solid var(--border);border-radius:8px;background:#fff;display:block;"></iframe>
     <div style="margin-top: 20px; display: flex; gap: 16px;">
-      <a href="#" class="btn btn-primary" style="font-size:12px;">Download PDF</a>
-      <a href="#" class="btn btn-ghost" style="font-size:12px;">View on Google Drive</a>
+      <a href="resume.html" target="_blank" class="btn btn-primary" style="font-size:12px;">View Full Resume →</a>
     </div>
   </div>
 </section>
@@ -672,9 +656,9 @@
   <div class="cards-grid">
 
     <div class="card reveal">
-      <div class="card-img">
+      <div class="card-img" style="background: linear-gradient(135deg, #0a1628, #0d2b4e, #0a3d6b);">
         <div class="card-img-accent"></div>
-        <span style="position:relative;z-index:1;">[ swim team photo ]</span>
+        <span style="position:relative;z-index:1;font-family:'JetBrains Mono',monospace;font-size:28px;color:rgba(0,229,255,0.6);">〜</span>
       </div>
       <div class="card-body">
         <div class="card-tag">Extracurricular</div>
@@ -686,9 +670,9 @@
     </div>
 
     <div class="card reveal">
-      <div class="card-img">
+      <div class="card-img" style="background: linear-gradient(135deg, #1a0a2e, #2d1b4e, #1a0a3d);">
         <div class="card-img-accent"></div>
-        <span style="position:relative;z-index:1;">[ hackathon photo ]</span>
+        <span style="position:relative;z-index:1;font-family:'JetBrains Mono',monospace;font-size:28px;color:rgba(124,77,255,0.7);">{⚡}</span>
       </div>
       <div class="card-body">
         <div class="card-tag">Competition</div>
@@ -700,9 +684,9 @@
     </div>
 
     <div class="card reveal">
-      <div class="card-img">
+      <div class="card-img" style="background: linear-gradient(135deg, #0a1a0a, #0d2b0d, #1a3d1a);">
         <div class="card-img-accent"></div>
-        <span style="position:relative;z-index:1;">[ sports / data image ]</span>
+        <span style="position:relative;z-index:1;font-family:'JetBrains Mono',monospace;font-size:28px;color:rgba(255,215,64,0.7);">📈</span>
       </div>
       <div class="card-body">
         <div class="card-tag">Passion Project</div>
@@ -736,7 +720,7 @@
         <p class="card-desc">
           An iOS app built with a six-person team under GriffMonster LLC that uses real-time computer vision to help puzzlers find piece placements. The ML pipeline runs Mask2Former — a universal instance segmentation architecture — to isolate individual puzzle pieces from a camera frame, then passes each piece to a SIFT-based matching algorithm that compares feature descriptors against a reference image and returns a placement suggestion. Built with an iOS Swift frontend, FastAPI backend, and an accessibility-first design philosophy. Presented at the CU Boulder Senior Capstone Expo.
         </p>
-        <a href="#" class="card-link">→ View on GitHub</a>
+        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7452799140855582721/" target="_blank" class="card-link">→ See Capstone Post</a>
       </div>
     </div>
 
@@ -751,14 +735,14 @@
         <p class="card-desc">
           A subscription-based MLB sports betting analytics service built entirely from scratch — including branding, quantitative edge models, a subscriber-facing dashboard, and a social media presence. Diamond Analytics uses historical game data, line movement analysis, and regression modeling to identify +EV betting opportunities in MLB markets. The project involved building out the full brand identity (dark terminal aesthetic, green/white/gold palette), an ROI calculator widget, and a content strategy targeting serious bettors who value transparency and data over gut picks.
         </p>
-        <a href="#" class="card-link">→ View Diamond Analytics</a>
+        <a href="#" class="card-link" style="color:var(--muted);cursor:default;">→ Coming Soon</a>
       </div>
     </div>
 
     <div class="card reveal">
-      <div class="card-img">
+      <div class="card-img" style="background: linear-gradient(135deg, #1a0f0a, #2e1f0d, #1a1200);">
         <div class="card-img-accent"></div>
-        <span style="position:relative;z-index:1;">[ project image ]</span>
+        <span style="position:relative;z-index:1;font-family:'JetBrains Mono',monospace;font-size:13px;color:rgba(255,215,64,0.7);">model.fit(X_train)</span>
       </div>
       <div class="card-body">
         <div class="card-tag">Academic · ML · CU Boulder</div>
@@ -766,7 +750,7 @@
         <p class="card-desc">
           Throughout CSCI 4622 (Machine Learning) at CU Boulder, I built and trained models covering neural networks, CNNs, reinforcement learning, and generative AI architectures including GANs, VAEs, and diffusion models. Beyond coursework, I've applied ML techniques in both of my major projects — Mask2Former fine-tuning for puzzle piece segmentation in I'm Puzzled!, and regression/classification models for game outcome prediction in Diamond Analytics. I'm comfortable working across the ML stack from data preprocessing and feature engineering through model evaluation and deployment.
         </p>
-        <a href="#" class="card-link">→ View on GitHub</a>
+        <a href="https://github.com/maxwool" target="_blank" class="card-link">→ View on GitHub</a>
       </div>
     </div>
 
@@ -791,10 +775,10 @@
       </p>
     </a>
 
-    <a href="https://github.com/" target="_blank" class="social-card reveal">
+    <a href="https://github.com/maxwool" target="_blank" class="social-card reveal">
       <div class="social-icon">&lt;/&gt;</div>
       <div class="social-platform">GitHub</div>
-      <div class="social-handle">[ add your handle ]</div>
+      <div class="social-handle">maxwool</div>
       <p class="social-desc">
         Where the real work lives. My GitHub contains repos for I'm Puzzled!, academic ML projects, sports analytics experiments, and miscellaneous tools I've built. It's the most honest representation of what I actually build and how I code — commit history included. If you're evaluating me as a developer, my GitHub is the most useful thing to look at. Code quality, project structure, and documentation all matter to me.
       </p>
